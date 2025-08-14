@@ -58,7 +58,7 @@ body {
 .hero__phone {
     border-radius: 40px;
     width: 380px;
-    box-shadow: 10px 10px 30px 0 rgba(174, 174, 192, 0.4), -10px -10px 30px 0 #fff;
+    box-shadow: 10px 10px 30px 0 rgba(128, 128, 136, 0.4), -10px -10px 30px 0 #fff;
 }
 
 .hero__phone-screen {
@@ -87,17 +87,61 @@ body {
 .decoration {
     position: absolute;
     z-index: -999;
+    will-change: transform;
 }
 
-.dots-element {
-    left: 70%;
+.dots-element1 {
+    left: calc(60% + (100vw - 1310px) * 0.1);
     bottom: 410px;
-    z-index: -999;
-    margin-left: -100px;
+    transition: left 0.8s ease-out;
+}
+
+.dots-element2 {
+    left: calc(45% + (20vw - 1310px) * 0.3);
+    bottom: 70%;
+    transition: left 0.8s ease-out;
 }
 
 .cube {
+    left: calc(65% + (100vw - 1310px) * 0.4);
+    top: 10%;
+    transition: left 0.4s ease-out;
     border-radius: 12px;
-    width: 150px;
-    height: 150px;
+    width: 230px;
+    height: 230px;
+    background: #f0f0f3;
+    box-shadow: 10px 10px 30px 0 rgba(128, 128, 136, 0.4), -10px -10px 30px 0 #fff
+}
+
+.cube2 {
+    left: 10%;
+    top: 25%;
+    transition: left 0.4s ease-out;
+    border-radius: 12px;
+    width: 230px;
+    height: 230px;
+    background: #f0f0f3;
+    box-shadow: 10px 10px 30px 0 rgba(128, 128, 136, 0.4), -10px -10px 30px 0 #fff
+}
+
+.ball {
+    left: calc(80% + (100vw - 1310px) * 0.1);
+    top: 70%;
+    transition: left 0.5s ease-out;
+    width: 260px;
+    height: 260px;
+    border-radius: 100%;
+    fill: #f0f0f3;
+    box-shadow: -10px -10px 30px 0 #fff, 10px 10px 30px 0 rgba(128, 128, 136, 0.4);
+}
+
+.ball2 {
+    left: calc(10% + (40vw - 1310px) * 0.2);
+    top: 80%;
+    transition: left 0.5s ease-out;
+    width: 380px;
+    height: 380px;
+    border-radius: 100%;
+    fill: #f0f0f3;
+    box-shadow: -10px -10px 30px 0 #fff, 10px 10px 30px 0 rgba(128, 128, 136, 0.4);
 }
