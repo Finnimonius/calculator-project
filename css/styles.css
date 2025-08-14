@@ -38,7 +38,15 @@ body {
     width: 100%;
 }
 
+:root {
+    --dots-offset: 70px;
+}
+
 /* phone */
+.hero {
+    position: relative;
+}
+
 .hero__container {
     align-items: center;
     justify-content: center;
@@ -49,14 +57,14 @@ body {
 
 .hero__phone {
     border-radius: 40px;
-    width: 350px;
+    width: 380px;
     box-shadow: 10px 10px 30px 0 rgba(174, 174, 192, 0.4), -10px -10px 30px 0 #fff;
 }
 
 .hero__phone-screen {
     width: 100%;
     height: 250px;
-    border-radius: 20px 20px 0 0;
+    border-radius: 30px 30px 0 0;
     background-color: #151515;
     background-image:
         radial-gradient(rgba(255, 255, 255, 0.02) 9%,
@@ -73,4 +81,23 @@ body {
     height: 450px;
     background-color: #f0f0f3;
     border-radius: 15px;
+}
+
+/* decorations-background */
+.decoration {
+    position: absolute;
+    z-index: -999;
+}
+
+.dots-element {
+    left: 70%;
+    bottom: 410px;
+    z-index: -999;
+    margin-left: -100px;
+}
+
+.cube {
+    border-radius: 12px;
+    width: 150px;
+    height: 150px;
 }

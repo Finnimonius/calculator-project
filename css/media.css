@@ -1,0 +1,16 @@
+
+@media (max-width: 1200px) {
+    .dots-element {
+        right: 5%;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 50px;
+    }
+
+    .dots-element {
+        right: 2%;
+    }
+}
