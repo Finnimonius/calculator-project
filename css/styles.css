@@ -13,8 +13,29 @@ a {
     text-decoration: none;
 }
 
+@font-face {
+    font-family: "Muller";
+    src: local("Muller-Bold"),
+        url("../fonts/MullerBold.woff2") format("woff2"),
+        url("../fonts/MullerBold.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Muller";
+    src: local("Muller-Medium"),
+        url("../fonts/MullerMedium.woff2") format("woff2"),
+        url("../fonts/MullerMedium.woff") format("woff");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
 body {
-    min-width: 320px;
+    min-width: 600px;
+    font-family: "Muller", sans-serif;
     font-family: serif;
     font-weight: 400;
     background-color: #f0f0f3;
@@ -38,8 +59,16 @@ body {
     width: 100%;
 }
 
+.btn-reset {
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
 :root {
     --dots-offset: 70px;
+    --gap: 30px;
 }
 
 /* phone */
@@ -62,8 +91,10 @@ body {
 }
 
 .hero__phone-screen {
+    justify-content: right;
+    padding: 150px 40px 0 40px;
     width: 100%;
-    height: 250px;
+    height: 300px;
     border-radius: 30px 30px 0 0;
     background-color: #151515;
     background-image:
@@ -71,16 +102,99 @@ body {
             transparent 9%);
     background-size: 30px 30px;
     background-position: 0 0, 15px 15px;
-
     z-index: -999;
 }
 
+.hero__phone-wrap {
+    right: 10px;
+    font-weight: 520;
+}
+
+.hero__phone-input {
+    text-align: right;
+    margin-bottom: 10px;
+    color: gray;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.hero__phone-output {
+    color: #fff;
+    font-size: 60px;
+    font-weight: 700;
+}
+
 .hero__phone-numbers {
+    position: relative;
+    flex-wrap: wrap;
     margin-top: -10px;
+    gap: 18px;
+    font-size: 40px;
+    padding: 40px 40px 40px 40px;
     z-index: 1;
     height: 450px;
     background-color: #f0f0f3;
-    border-radius: 15px;
+    border-radius: 8px 8px 15px 50px;
+}
+
+.hero__phone-indicator {
+    position: absolute;
+    width: 100px;
+    height: 10px;
+    left: 140px;
+    top: 15px;
+    border-radius: 12px;
+    border: 1px solid rgb(216, 215, 215);
+    box-shadow: 10px 10px 30px 0 rgba(189, 189, 199, 0.4), -10px -10px 30px 0 #fdfdfd
+}
+
+.hero__phone-indicator-back {
+    width: 100px;
+    height: 10px;
+    border-radius: 12px;
+    background-color: rgb(253, 106, 106);
+    transition: background-color .3s ease-in-out;
+}
+
+.hero__phone-btn {
+    width: calc((100% / 4) - (18px * 3) / 4);
+    height: 60px;
+    border-radius: 12px;
+    opacity: 0.9;
+    background: #f0f0f3;
+    box-shadow: 10px 10px 30px 0 rgba(204, 204, 212, 0.4), -10px -10px 30px 0 #fdfdfd;
+        transition: all 0.3s ease;
+}
+
+.hero__phone-btn:hover {
+    box-shadow: inset 5px 5px 10px rgba(204, 204, 212, 0.4), 
+                inset -5px -5px 10px #fdfdfd;
+    transform: translateY(2px);
+    opacity: 1;
+}
+
+.btn-number {
+    color: #7077b6;
+    font-weight: 800;
+}
+
+.btn-gray {
+    font-size: 23px;
+    font-weight: 600;
+    color: #3f3f3f;
+}
+
+.btn-green {
+    background-color: #66cfc5;
+}
+
+.btn-purple {
+    color: #211d46;
+}
+
+.btn-c {
+    font-size: 36px;
+    font-weight: 800;
 }
 
 /* decorations-background */
