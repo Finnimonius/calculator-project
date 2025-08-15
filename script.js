@@ -29,7 +29,7 @@ const clearAll = () => {
 }
 
 const handleNumber = (number) => {
-    if (currentInput.length >= 13) return;
+    if (currentInput.length >= 12) return;
 
     if (currentInput === "0" || shouldReset) {
         currentInput = number;
@@ -66,7 +66,7 @@ const calculate = () => {
         default: return;
     }
 
-    currentInput = res.toString().slice(0, 13);
+    currentInput = res.toString().slice(0, 12);
     operation = null;
     display.textContent = currentInput;
     result.textContent = currentInput;
@@ -74,7 +74,7 @@ const calculate = () => {
 }
 
 const handleDecimal = () => {
-    if (currentInput.length >= 13) return;
+    if (currentInput.length >= 12) return;
 
     if (shouldReset) {
         currentInput = "0.";
