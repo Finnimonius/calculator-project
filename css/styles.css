@@ -106,6 +106,8 @@ body {
 }
 
 .hero__phone-wrap {
+    flex-direction: column;
+    align-items: right;
     right: 10px;
     font-weight: 520;
 }
@@ -119,8 +121,9 @@ body {
 }
 
 .hero__phone-output {
+    text-align: right;
     color: #fff;
-    font-size: 60px;
+    font-size: 52px;
     font-weight: 700;
 }
 
@@ -153,7 +156,7 @@ body {
     height: 10px;
     border-radius: 12px;
     background-color: rgb(253, 106, 106);
-    transition: background-color .3s ease-in-out;
+    transition: background-color .1s ease-in-out;
 }
 
 .hero__phone-btn {
@@ -189,7 +192,9 @@ body {
 }
 
 .btn-purple {
-    color: #211d46;
+    font-size: 24px;
+    font-weight: 600;
+    color: #3816d3;
 }
 
 .btn-c {
